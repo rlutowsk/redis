@@ -16,4 +16,6 @@
 
 #! @Description
 #!   Insert documentation for your function here
-DeclareGlobalFunction( "redis_Example" );
+DeclareGlobalFunction( "RedisCommand" );
+DeclareGlobalFunction( "RedisStatus" );
+DeclareGlobalFunction( "RedisStatusMessage" );

@@ -4,6 +4,9 @@
 KEXT_NAME = redis
 KEXT_SOURCES = src/redis.c
 
+CFLAGS += @CFLAGS@
+LDFLAGS += @LDFLAGS@
+
 # include shared GAP package build system
-GAPPATH = @GAPPATH@
+GAPPATH = @GAPROOT@
 include Makefile.gappkg

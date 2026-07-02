@@ -3,8 +3,17 @@
 #
 # Implementations
 #
-InstallGlobalFunction( redis_Example,
-function()
-	Print( "This is a placeholder function, replace it with your own code.\n" );
+InstallGlobalFunction( RedisCommand,
+function(arg)
+	return RedisCMD(CallFuncList(StringFormatted,arg));
 end );
 
+InstallGlobalFunction( RedisStatus,
+function()
+	return REDIS_STATUS;
+end );
+
+InstallGlobalFunction( RedisStatusMessage,
+function()
+	return REDIS_STATUS.message;
+end );
