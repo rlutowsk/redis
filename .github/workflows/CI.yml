@@ -35,6 +35,10 @@ jobs:
       - uses: gap-actions/setup-gap@v3
         with:
           gap-version: ${{ matrix.gap-version }}
+      - name: Install System Dependencies (libhiredis)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libhiredis-dev
       - uses: gap-actions/build-pkg@v3
       - uses: gap-actions/run-pkg-tests@v4
       - uses: gap-actions/run-pkg-tests@v4
