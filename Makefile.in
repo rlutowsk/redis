@@ -1,0 +1,9 @@
+#
+# Makefile rules for the redis package
+#
+KEXT_NAME = redis
+KEXT_SOURCES = src/redis.c
+
+# include shared GAP package build system
+GAPPATH = @GAPPATH@
+include Makefile.gappkg
